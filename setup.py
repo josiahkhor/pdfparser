@@ -6,7 +6,9 @@ import subprocess
 import sys
 import re
 
-from setuptools import Extension, setup
+from setuptools import Extension, setup, dist
+
+dist.Distribution().fetch_build_eggs(['Cython>=0.29'])
 
 try:
     from Cython.Build import cythonize
